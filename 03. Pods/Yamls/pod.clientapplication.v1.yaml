@@ -1,0 +1,16 @@
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-clientapplication-presentation
+  labels:
+    app: clientapplication
+    type: presentation
+    appVersion: v1
+    release: release1
+spec:
+  containers:
+  - name: container-clientapplication-presentation-v1
+    image: customer-application/app-presentation:v1
+    ports: 
+    - containerPort: 5000
